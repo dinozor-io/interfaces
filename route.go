@@ -1,6 +1,8 @@
 package interfaces
 
 type Route interface {
-	GetMethod() int8
-	GetPath() string
+	Init(int8, string, func(Controller))
+	Method() int8
+	Path() string
+	Callback() func(Controller)
 }
